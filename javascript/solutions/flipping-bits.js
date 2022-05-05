@@ -1,3 +1,5 @@
+//ts-check
+
 function flippingBits(n) {
     let binaryString = createBinaryString(n);
     let newBinaryString = "";
