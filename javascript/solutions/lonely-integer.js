@@ -1,14 +1,14 @@
 function lonelyinteger(a) {
-  let ans = 0;
+    let ans = 0;
 
-  for (let i = 0; i < a.length; i++) {
-    let temp = a.filter((e) => e == a[i]);
-    if (temp.length == 1) {
-      ans = a[i];
-      break;
+    for (let i = 0; i < a.length; i++) {
+        let temp = a.filter((e) => e == a[i]);
+        if (temp.length == 1) {
+            ans = a[i];
+            break;
+        }
     }
-  }
-  return ans;
+    return ans;
 }
 
 let a1 = [1, 1, 2, 2, 3, 4, 4];
