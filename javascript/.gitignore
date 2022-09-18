@@ -1,4 +1,6 @@
-.idea
+# JS Files in /typescript
+solutions/typescript/*.js
+
 # Logs
 logs
 *.log
