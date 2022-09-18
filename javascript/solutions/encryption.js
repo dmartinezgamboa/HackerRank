@@ -1,19 +1,18 @@
 function encryption(s) {
-    let filtered = s.split("").filter((c) => c != " ");
-    let L = Math.sqrt(filtered.length);
-    let numRows = Math.floor(L);
-    let numCols = Math.ceil(L);
+    let noSpaces = s.split("").filter((char) => char != " ");
+    let len = Math.sqrt(noSpaces.length);
+    let numRows = Math.floor(len);
+    let numCols = Math.ceil(len);
 
-    if (numCols * numRows < filtered.length) {
-        console.log("here");
+    if (numCols * numRows < noSpaces.length) {
         numRows++;
     }
 
     let result = "";
-    for (let i = 0; i < numCols; i++) {
-        for (let j = 0; j < numRows; j++) {
-            let nextChar = filtered[i + j * numCols];
-            console.log(nextChar);
+
+    for (let c = 0; c < numCols; c++) {
+        for (let r = 0; r < numRows; r++) {
+            let nextChar = noSpaces[c + r * numCols];
             if (nextChar == undefined) {
                 break;
             }
@@ -23,7 +22,3 @@ function encryption(s) {
     }
     return result;
 }
-
-let test = "chillout";
-let result = encryption(test);
-console.log(result);
